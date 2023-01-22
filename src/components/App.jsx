@@ -22,7 +22,7 @@ export default function App() {
 
 
   useEffect(() => {     
-    dispatch (fetchContacts ())
+    dispatch (fetchContacts())
 },[dispatch])
 
  
