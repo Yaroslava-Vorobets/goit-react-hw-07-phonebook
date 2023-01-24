@@ -4,6 +4,7 @@ import { useState} from 'react';
 import {Form, Label, Input,  Button, } from './Form.Styled';
 import { addContact } from 'redux/operations';
 import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
 import {selectContact} from 'redux/selectors'
 
 
@@ -15,9 +16,6 @@ export default function ContactForm () {
     const contacts = useSelector(selectContact);
     const dispatch = useDispatch();
      console.log(contacts)
-
-
- 
    
 
   const  handleChange = e => {
@@ -35,9 +33,9 @@ export default function ContactForm () {
        }      
     } 
    
-    const reset =    
+    const reset = () =>{  
     setName('');
-    setNumber('');
+    setNumber('');}
     
   const  handleSubmit = e => {            
       e.preventDefault();
@@ -50,7 +48,7 @@ export default function ContactForm () {
       return;
     }
  
-    dispatch(addContact(name, number))
+      dispatch(addContact({ name, phone:number}))
     reset ()
         
     } 

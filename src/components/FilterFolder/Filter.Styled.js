@@ -6,7 +6,7 @@ export const Label = styled.label`
     color: #64C3F3;
     margin-bottom: 10px;
     letter-spacing: 4px;
-    font: normal 26px Verdana, Helvetica;
+    font: normal 26px Verdana, Helvetica;    
    ` 
 
 export const Input = styled.input`   
@@ -15,6 +15,7 @@ export const Input = styled.input`
     padding: 10px;
     width: 40%;
     margin-left: 10px; 
+     margin-bottom: 10px; 
     color: #5F5F5F;
     box-shadow: 
     inset 0 2px 0 rgba(0,0,0,.2), 

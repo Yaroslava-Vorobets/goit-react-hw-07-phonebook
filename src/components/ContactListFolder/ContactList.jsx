@@ -9,12 +9,11 @@ const ContactList = () => {
 
   return (
      <List>
-        {visibleContacts.map(({ id, name, number }) =>      
-                <ContactElement key={id}    
-                       
+        {visibleContacts.map(({ id, name, phone }) =>      
+                <ContactElement key={id}                         
                       name={name}
                       id={id}
-                      number={number} /> 
+                      number={phone} /> 
         )}                 
     </List>
   )

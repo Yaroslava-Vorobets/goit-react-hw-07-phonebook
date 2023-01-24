@@ -25,7 +25,7 @@ export const ContactSlise = createSlice({
         contacts => contacts.id === action.payload.id);
       state.items.splice(index, 1);
    }) 
-    .addMatcher(isAnyOf(...extraActions.map(action => action.pending)), (state) => { state.isLoading = true })
+  .addMatcher(isAnyOf(...extraActions.map(action => action.pending)), (state) => { state.isLoading = true })
  
   .addMatcher(isAnyOf(...extraActions.map(action => action.rejected)), (state, action) => {
           state.isLoading = false;
